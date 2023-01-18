@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { popularsales } from './data/data.js';
 import { Navbar, ItemDetail } from './components';
-import { AuthWrapper, Home } from './pages';
+import { AuthWrapper, Home , Cart} from './pages';
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
             path='/products/:id'
             element={<ItemDetail endpoint={popularsales} ifExists />}
           />
+          <Route exact path='/cart' element={<Cart />} />
         </Routes>
       </main>
     </AuthWrapper>

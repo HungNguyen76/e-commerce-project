@@ -9,3 +9,8 @@ export { default as ItemDetail } from './ItemDetail.jsx';
 export { default as Title } from './Title.jsx';
 export { default as Stars } from './Stars.jsx';
 export { default as ProductImages } from './ProductImages.jsx';
+export { default as CartButtons } from './CartButtons.jsx';
+export { default as CartContent } from './CartContent.jsx';
+export { default as CartItem } from './CartItem.jsx';
+export { default as CartColumns } from './CartColumns.jsx';
+export { default as AmountButtons } from './AmountButtons.jsx';

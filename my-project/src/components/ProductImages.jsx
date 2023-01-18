@@ -25,7 +25,8 @@ const ProductImages = ({ images = [{ url: '' }] }) => {
 
 const Wrapper = styled.section`
     .main {
-        height: 700px
+        height: 700px;
+        width: 1000px;
     }
     img {
         width: 100%;
@@ -39,7 +40,7 @@ const Wrapper = styled.section`
         grid-template-columns: repeat(5, 1fr);
         column-gap: 1rem;
         img {
-            height: 200px;
+            height: 100px;
             cursor: pointer;
         }
     }

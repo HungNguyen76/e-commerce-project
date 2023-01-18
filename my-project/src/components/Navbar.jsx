@@ -10,25 +10,28 @@ import {
 import { AiOutlineHeart } from 'react-icons/ai';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import logo from '../assets/logo.png';
-import { useUserContext } from '../context/user_context.jsx';
+import { useCartContext } from '../context/cart_context';
+import { useUserContext } from '../context/user_context';
+import CartButtons from './CartButtons';
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const { loginWithRedirect, myUser, logout } = useUserContext();
   const [navState, setNavState] = useState(false);
-
-  const onNavScroll = () => {
-    if (window.scrollY < 30) {
-      setNavState(true);
-    } else {
-      setNavState(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener('scroll', onNavScroll);
-    return () => {
-      window.removeEventListener('scroll', onNavScroll);
-    };
-  }, []);
+  const { total_items } = useCartContext();
+  // const onNavScroll = () => {
+  //   if (window.scrollY > 30) {
+  //     setNavState(true);
+  //   } else {
+  //     setNavState(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   window.addEventListener('scroll', onNavScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', onNavScroll);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -46,17 +49,19 @@ const Navbar = () => {
       >
         <nav className='flex items-center justify-between nike-container'>
           <div className='flex items-center'>
-            <img
-              src={logo}
-              alt='logo/img'
-              className={`w-16 h-auto ${navState && 'filter brightness-0'}`}
-            />
+            <Link to='/'>
+              <img
+                src={logo}
+                alt='logo/img'
+                className={`w-16 h-auto ${!navState && 'filter brightness-0'}`}
+              />
+            </Link>
           </div>
           <ul className='flex items-center justify-center gap-2 '>
             <li className='grid items-center'>
               <AiOutlineSearch
                 className={`icon-style ${
-                  navState && 'text-slate-900 transition-all duration-300'
+                  !navState && 'text-slate-900 transition-all duration-300'
                 } `}
               />
             </li>
@@ -64,7 +69,7 @@ const Navbar = () => {
               <li className='grid items-center'>
                 <AiOutlineUserDelete
                   className={`icon-style ${
-                    navState && 'text-slate-900 transition-all duration-300'
+                    !navState && 'text-slate-900 transition-all duration-300'
                   } `}
                   onClick={() => {
                     localStorage.removeItem('user');
@@ -76,7 +81,7 @@ const Navbar = () => {
               <li className='grid items-center'>
                 <AiOutlineUserAdd
                   className={`icon-style ${
-                    navState && 'text-slate-900 transition-all duration-300'
+                    !navState && 'text-slate-900 transition-all duration-300'
                   } `}
                   onClick={loginWithRedirect}
                 />
@@ -86,7 +91,7 @@ const Navbar = () => {
               <button type='button' className=''>
                 <HiOutlineShoppingBag
                   className={`icon-style ${
-                    navState && 'text-slate-900 transition-all duration-300'
+                    !navState && 'text-slate-900 transition-all duration-300'
                   } `}
                 />
                 <div
@@ -96,7 +101,8 @@ const Navbar = () => {
                       : 'bg-slate-100 text-slate-900 shadow-slate-100'
                   } `}
                 >
-                  0
+                  <Link to='/cart'>{total_items}</Link>
+                  {/* <CartButtons /> */}
                 </div>
               </button>
             </li>

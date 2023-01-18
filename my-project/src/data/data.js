@@ -81,6 +81,8 @@ const popularsales = {
       img: psale2,
       price: '200',
       reviews: 19,
+      shipping: true,
+      stock: 10,
       images: [
         {
           url: adapt1,
@@ -118,6 +120,8 @@ const popularsales = {
       img: psale1,
       price: '200',
       reviews: 10,
+      shipping: true,
+      stock: 7,
       images: [
         {
           url: martinRose1,
@@ -155,6 +159,8 @@ const popularsales = {
       img: psale3,
       price: '200',
       reviews: 50,
+      shipping: true,
+      stock: 5,
       images: [
         {
           url: smartShoe1,
