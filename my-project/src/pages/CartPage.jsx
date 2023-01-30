@@ -11,7 +11,7 @@ const CartPage = () => {
             <Wrapper className='page-100'>
                 <div className='empty'>
                     <h2>There are no items in your bag</h2>
-                    <Link to='/products' className='btn'>
+                    <Link to='/' className='btn'>
                         Buy a product
                     </Link>
                 </div>
@@ -20,14 +20,15 @@ const CartPage = () => {
     }
     return (
         <main>
-            {/* <Wrapper className='page'> */}
+            <Wrapper className='page'>
                 <CartContent />
-            {/* </Wrapper> */}
+            </Wrapper>
         </main>
     )
 }
 const Wrapper = styled.main`
     .empty {
+        margin-top: 5rem;
         text-align: center;
         h2 {
             margin-bottom: 1rem;

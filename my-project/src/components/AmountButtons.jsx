@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import { RxPlusCircled, RxMinusCircled } from 'react-icons/rx';
 
 
-const AmountButtons = ({ amount }) => {
+const AmountButtons = ({ increase, decrease, amount }) => {
     return (
       <Wrapper className='amount-btn'>
-        <button type='button' className='amount-btn'>
+        <button type='button' className='amount-btn' onClick={decrease}>
           <RxMinusCircled />
         </button>
         <h2 className='amount'>{amount}</h2>
-        <button type='button' className='amount-btn'>
+        <button type='button' className='amount-btn' onClick={increase}>
           <RxPlusCircled />
         </button>
       </Wrapper>

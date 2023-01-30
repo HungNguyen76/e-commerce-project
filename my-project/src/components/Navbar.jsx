@@ -13,7 +13,7 @@ import logo from '../assets/logo.png';
 import { useCartContext } from '../context/cart_context';
 import { useUserContext } from '../context/user_context';
 import CartButtons from './CartButtons';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const { loginWithRedirect, myUser, logout } = useUserContext();
@@ -88,23 +88,25 @@ const Navbar = () => {
               </li>
             )}
             <li className='border-none outline-none active:scale-110 transition-all duration-300 relative'>
-              <button type='button' className=''>
-                <HiOutlineShoppingBag
-                  className={`icon-style ${
-                    !navState && 'text-slate-900 transition-all duration-300'
-                  } `}
-                />
-                <div
-                  className={`absolute top-4 right-0 shadow w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${
-                    navState
-                      ? 'bg-slate-900 text-slate-100 shadow-slate-900'
-                      : 'bg-slate-100 text-slate-900 shadow-slate-100'
-                  } `}
-                >
-                  <Link to='/cart'>{total_items}</Link>
-                  {/* <CartButtons /> */}
-                </div>
-              </button>
+              <Link to='/cart'>
+                <button type='button' className=''>
+                  <HiOutlineShoppingBag
+                    className={`icon-style ${
+                      !navState && 'text-slate-900 transition-all duration-300'
+                    } `}
+                  />
+                  <div
+                    className={`absolute top-4 right-0 shadow w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${
+                      navState
+                        ? 'bg-slate-900 text-slate-100 shadow-slate-900'
+                        : 'bg-slate-100 text-slate-900 shadow-slate-100'
+                    } `}
+                  >
+                    {total_items}
+                    {/* <CartButtons /> */}
+                  </div>
+                </button>
+              </Link>
             </li>
           </ul>
         </nav>

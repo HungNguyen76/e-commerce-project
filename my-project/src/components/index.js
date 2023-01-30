@@ -14,3 +14,5 @@ export { default as CartContent } from './CartContent.jsx';
 export { default as CartItem } from './CartItem.jsx';
 export { default as CartColumns } from './CartColumns.jsx';
 export { default as AmountButtons } from './AmountButtons.jsx';
+export { default as ProductList } from './ProductList.jsx';
+export { default as GridView } from './GridView.jsx';

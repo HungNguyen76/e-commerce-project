@@ -7,18 +7,22 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import { UserProvider } from './context/user_context';
 import { ProductsProvider } from './context/products_context';
 import { CartProvider } from './context/cart_context';
+import { FilterProvider } from './context/filter_context';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Auth0Provider
       domain='dev-he76tobue6thzyrt.uk.auth0.com'
-      clientId='QCMqn3sowvd9ifrpMHGfsH5n11X0ABs2'
+      clientId='eRUt4sNWnT6fTYCyCPR5K7CAu1Iof9v1'
       redirectUri={window.location.origin}
+      cacheLocation='localstorage'
     >
       <UserProvider>
         <ProductsProvider>
           <CartProvider>
-            <App />
+            <FilterProvider>
+              <App />
+            </FilterProvider>
           </CartProvider>
         </ProductsProvider>
       </UserProvider>

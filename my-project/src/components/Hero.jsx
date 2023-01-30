@@ -1,5 +1,6 @@
 import React from 'react';
-import {Clips, SocialLink} from '../components';
+import { Clips, SocialLink } from '../components';
+import { Link } from 'react-router-dom';
 
 const Hero = ({
   heroapi: { title, subtitle, btntext, img, sociallinks, videos },
@@ -20,7 +21,7 @@ const Hero = ({
               type='button'
               className='button-theme bg-slate-200 shadow-slate-200 rounded-xl my-5'
             >
-              {btntext}
+              <Link to='/products'>{btntext}</Link>
             </button>
             <div className=' grid items-center gap-5 md:gap-3 absolute top-[32vh] lg:top-[27vh] left-[11%] xl:left-0 w-auto h-auto '>
               {videos?.map((val, i) => (
@@ -28,14 +29,10 @@ const Hero = ({
               ))}
             </div>
             <div className=' grid items-center absolute top-[33vh] lg:top-[27vh] right-0 gap-3  '>
-            {sociallinks?.map((val, i) => (
-              <SocialLink
-                key={i}
-                icon={val.icon}
-                url={val.url}
-                />
-            ))} 
-          </div>
+              {sociallinks?.map((val, i) => (
+                <SocialLink key={i} icon={val.icon} url={val.url} />
+              ))}
+            </div>
           </div>
           <div className='flex items-center'>
             <img

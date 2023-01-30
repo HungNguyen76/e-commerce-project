@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useCartContext } from '../context/cart_context'
 import {Link} from 'react-router-dom'
 import { CartItem, CartColumns } from '../components';
+import CartTotals from './CartTotals';
 
 const CartContent = () => {
     const { cart } = useCartContext()
@@ -14,6 +15,7 @@ const CartContent = () => {
             })}
             <hr />
             
+        <CartTotals />
         </Wrapper>
     )
 }

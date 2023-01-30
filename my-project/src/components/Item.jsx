@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { HiShoppingBag } from 'react-icons/hi';
+import { useCartContext } from '../context/cart_context';
 
 const Item = ({
   ifExists,
   id,
   color,
-  shadow,
   title,
   text,
   img,
@@ -14,10 +14,20 @@ const Item = ({
   rating,
   price,
 }) => {
+  const { addToCart } = useCartContext();
+  const [amount, setAmount] = useState(1);
+  const product = {
+    id,
+    title,
+    color,
+    amount,
+    image: img,
+    price,
+  };
   return (
     <>
       <div
-        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center ${
+        className={`relative bg-gradient-to-b ${color} grid items-center ${
           ifExists ? 'justify-items-start' : 'justify-items-center'
         } rounded-xl py-4 px-5 transition-all duration-700 ease-in-out w-full hover:scale-105`}
       >
@@ -55,6 +65,7 @@ const Item = ({
             <button
               type='button'
               className='bg-white/90 blur-effect-theme button-theme px-2 py-1 shadow shadow-slate-200 text-sm text-black'
+              onClick={() => addToCart(id, color, amount, product)}
             >
               {btn}
             </button>

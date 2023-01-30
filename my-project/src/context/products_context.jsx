@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useReducer } from 'react';
 import reducer from '../reducers/products_reducer';
-import { products_url as url } from '../utils/constants';
-import { popularsales } from '../data/data.js';
+// import { products_url as url } from '../utils/constants';
+import { popularsales as url} from '../data/data.js';
 import {
   GET_PRODUCTS_SUCCESS,
 } from '../actions';
@@ -30,7 +30,7 @@ export const ProductsProvider = ({ children }) => {
 
   useEffect(() => {
     fetchProducts(url);
-  }, []);
+  }, [url]);
 
 
   return (

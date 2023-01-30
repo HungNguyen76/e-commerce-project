@@ -1,23 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
-import { TfiTrash } from 'react-icons/tfi'
-import {AmountButtons} from '../components';
+import { TfiTrash } from 'react-icons/tfi';
+import { AmountButtons } from '../components';
+import { useCartContext } from '../context/cart_context';
 
-const CartItem = ({ id, image, title, color, price, amount }) => {
+const CartItem = ({ id, image, name, color, price, amount }) => {
+  const { removeItem, toggleAmount } = useCartContext();
+  const increase = () => {
+    toggleAmount(id, 'inc');
+  };
+  const decrease = () => {
+    toggleAmount(id, 'dec');
+  };
+
   return (
     <Wrapper>
       <div className='title'>
-        <img src={image} alt={title} />
+        <img src={image} alt={name} />
         <div>
-          <h5 className='name'>{title}</h5>
+          <h5 className='name'>{name}</h5>
           <p className='color'>
             Color: <span style={{ background: color }}></span>
           </p>
         </div>
       </div>
       <h5 className='price'>{formatPrice(price)}</h5>
-      <AmountButtons amount={amount}/>
+      <AmountButtons amount={amount} increase={increase} decrease={decrease} />
       <h5 className='subtotal'>{formatPrice(price * amount)}</h5>
       <button
         type='button'
@@ -52,7 +61,7 @@ const Wrapper = styled.div`
     height: 100%;
     display: block;
     border-radius: var(--radius);
-    object-fit: cover;
+    object-fit: contain;
   }
   h5 {
     font-size: 0.75rem;
