@@ -29,7 +29,7 @@ export default function BlogPage() {
           <Typography variant="h4" gutterBottom>
             Blog
           </Typography>
-          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
+          <Button className="text-white bg-blue-600" variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
             New Post
           </Button>
         </Stack>

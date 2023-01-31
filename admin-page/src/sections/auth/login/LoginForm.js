@@ -45,7 +45,14 @@ export default function LoginForm() {
         </Link>
       </Stack>
 
-      <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
+      <LoadingButton
+        className="text-white bg-blue-600"
+        fullWidth
+        size="large"
+        type="submit"
+        variant="contained"
+        onClick={handleClick}
+      >
         Login
       </LoadingButton>
     </>
