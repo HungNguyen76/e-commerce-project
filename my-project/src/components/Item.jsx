@@ -9,7 +9,7 @@ const Item = ({
   color,
   title,
   text,
-  img,
+  image,
   btn,
   rating,
   price,
@@ -21,7 +21,7 @@ const Item = ({
     title,
     color,
     amount,
-    image: img,
+    image,
     price,
   };
   return (
@@ -77,7 +77,7 @@ const Item = ({
           }`}
         >
           <img
-            src={img}
+            src={image}
             alt={`img/item-img/$ {id}`}
             className={`transitions-theme hover:-rotate-12 ${
               ifExists
