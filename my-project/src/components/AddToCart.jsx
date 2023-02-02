@@ -6,29 +6,87 @@ import { useCartContext } from '../context/cart_context';
 
 const AddToCart = ({ product }) => {
   const { addToCart } = useCartContext();
-  const {id, title, stock, color } = product;
-  const [ amount, setAmount ] = useState(1)
+  const { Id, Title, stock, Colors, Sizes } = product;
+  const [amount, setAmount] = useState(1);
   return (
     <Wrapper>
-      <button
-        type='button'
-        className='btn button-theme bg-slate-900 shadow-slate-9 text-slate-100 py-1.5'
-        onClick={() => addToCart(id, color, amount, product)}
-      >
-        {/* <Link to='/cart'>add to bag</Link> */}
-        add to bag
-      </button>
+      <div className='colors'>
+        <div className='colors-item mt-5'>
+          {Colors.map((color) => {
+            return (
+              <img
+                src={color.imgColor[0].url}
+                alt={color.imgColor[0].filename}
+              />
+            );
+          })}
+        </div>
+
+        <div className='sizes mt-10'>
+          <h3>Select Size</h3>
+          <div className='sizes-item'>
+            {Colors[0].sizesColor.map(s => <span>{s.name}</span>)}
+          </div>
+        </div>
+        <button
+          type='button'
+          className='btn button-theme bg-slate-900 shadow-slate-9 text-slate-100 py-1.5'
+          // onClick={() => addToCart(id, color, amount, product)}
+        >
+          {/* <Link to='/cart'>add to bag</Link> */}
+          add to bag
+        </button>
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   .btn {
-    width: 80%;
+    width: 100%;
     height: 4rem;
     border-radius: 2rem;
-    margin: 2rem;
     text-transform: capitalize;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #757575;
+  }
+  .colors-item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0.3rem;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    img:hover {
+      border: 1px solid rgb(17, 17, 17);
+    }
+  }
+  .sizes {
+    span {
+      background: rgb(255, 255, 255);
+      color: rgb(17, 17, 17);
+      box-shadow: rgb(229 229 229) 0px 0px 0px 1px;
+      height: 48px;
+      border-radius: 4px;
+    }
+    .sizes-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 0.5rem;
+      row-gap: 0.5rem;
+      justify-content: center;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      span:hover {
+        box-shadow: rgb(17 17 17) 0px 0px 0px 1px inset;
+      }
+    }
   }
 `;
 export default AddToCart;

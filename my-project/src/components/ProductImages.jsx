@@ -5,7 +5,7 @@ const ProductImages = ({ images = [{ url: '' }] }) => {
   const [main, setMain] = useState(images[0]);
   return (
     <Wrapper>
-      <img src={main.url} alt='main' className='main' />
+      {/* <img src={main.url} alt='main' className='main' /> */}
       <div className='gallery'>
         {images.map((image, index) => {
           return (
@@ -29,24 +29,22 @@ const Wrapper = styled.section`
         width: 1000px;
     }
     img {
-        width: 100%;
+        width: 470px;
         display: block;
-        border-radius: var(--radius);
         object-fit: cover;
     }
     .gallery {
         margin-top: 1rem;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1rem;
         column-gap: 1rem;
         img {
-            height: 100px;
+            height: 450px;
             cursor: pointer;
         }
     }
-    .active {
-        border: 2px solid var(--clr-primary-5);
-    }
+
     @media (max-width: 576px) {
         .main {
             height: 500px;

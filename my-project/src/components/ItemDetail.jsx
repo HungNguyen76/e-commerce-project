@@ -3,29 +3,26 @@ import { Title, Stars, ProductImages } from '../components';
 import { formatPrice } from '../utils/helpers';
 import styled from 'styled-components';
 import AddToCart from './AddToCart';
+import { useParams } from 'react-router-dom'
 // import { GiMachineGun } from 'react-icons/gi';
 
 const ItemDetail = ({ ifExists, endpoint: { items } }) => {
-  const page = window.location;
-  const path = JSON.stringify(page).slice(61, 66);
-  const itemDetail = items.filter((item) => item.id === path);
-  const {
-    id,
-    text,
-    img,
-    price,
-    title: titleDetail,
-    description,
-    stars,
-    reviews,
-    images,
-  } = itemDetail[0];
-  const product = itemDetail[0];
+  const url = window.location;
+  const tempId = url.href.slice(-6);
+  
+  const itemDetail = items.find(item => {
+    const { Id } = item;
+    const sliceId = Id.split('').slice(-6).join('')
+    return item ? sliceId == tempId : null;
+  });
+  console.log(itemDetail.Colors[0])
+  const { Title, SubTitle, Desc, Stars, Reviews, Colors } = itemDetail;
+  const { imgColor, priceColor } = itemDetail.Colors[0];
 
   return (
     <Wrapper>
       <div className={`detail relative h-auto w-auto flex flex-col`}>
-        <div className='grid items-center justify-items-center nike-container mt-28'>
+        <div className='grid items-center justify-items-center nike-container mt-10'>
           <div className='flex items-start justify-between'>
             {/* <img
               src={img}
@@ -36,14 +33,19 @@ const ItemDetail = ({ ifExists, endpoint: { items } }) => {
                 : 'h-100 w-64'
               }`}
             /> */}
-            <ProductImages images={images} />
+            <ProductImages images={imgColor} />
             <section className='content'>
-              <Title title={titleDetail} />
-              <p>{text}</p>
-              <Stars stars={stars} reviews={reviews} />
-              <p className='price'>{formatPrice(price)}</p>
-              <p>{description}</p>
-              <AddToCart product={product} />
+              <div className='grid items-center'>
+                <h1 className='text-3xl lg:text-4xl md:text-3xl  font-bold text-slate-900 filter drop-shadow-lg'>
+                  {Title}
+                </h1>
+              </div>
+              {/* <p>{Title}</p> */}
+              {/* <Stars stars={Stars} reviews={Reviews} /> */}
+              <p>{SubTitle}</p>
+              <p className='price'>{formatPrice(priceColor)}</p>
+              <AddToCart product={itemDetail} />
+              <p className='mt-10'>{Desc}</p>
             </section>
           </div>
         </div>
@@ -59,7 +61,7 @@ const Wrapper = styled.div`
   }
   .content {
     width: 50%;
-    padding: 1.5rem;
+    padding: 3.5rem;
   }
 `;
 
