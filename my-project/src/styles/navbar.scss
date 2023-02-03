@@ -136,3 +136,11 @@ nav {
 .button-right {
     @apply hover:bg-[#f0efef] rounded-full p-2 cursor-pointer;
 }
+.search {
+    .icon-style {
+        left: 8px;
+        top: 8px;
+        opacity: 0.5;
+    }
+
+}

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Title, Stars, ProductImages } from '../components';
+import { Title, Star, ProductImages } from '../components';
 import { formatPrice } from '../utils/helpers';
 import styled from 'styled-components';
 import AddToCart from './AddToCart';
+
 import { useParams } from 'react-router-dom'
 // import { GiMachineGun } from 'react-icons/gi';
 
@@ -15,7 +16,6 @@ const ItemDetail = ({ ifExists, endpoint: { items } }) => {
     const sliceId = Id.split('').slice(-6).join('')
     return item ? sliceId == tempId : null;
   });
-  console.log(itemDetail.Colors[0])
   const { Title, SubTitle, Desc, Stars, Reviews, Colors } = itemDetail;
   const { imgColor, priceColor } = itemDetail.Colors[0];
 
@@ -41,11 +41,12 @@ const ItemDetail = ({ ifExists, endpoint: { items } }) => {
                 </h1>
               </div>
               {/* <p>{Title}</p> */}
-              {/* <Stars stars={Stars} reviews={Reviews} /> */}
               <p>{SubTitle}</p>
               <p className='price'>{formatPrice(priceColor)}</p>
               <AddToCart product={itemDetail} />
               <p className='mt-10'>{Desc}</p>
+              <hr className='mt-4' />
+              <Star stars={Stars} reviews={Reviews} />
             </section>
           </div>
         </div>
@@ -62,6 +63,7 @@ const Wrapper = styled.div`
   .content {
     width: 50%;
     padding: 3.5rem;
+    padding-top: 1rem !important;
   }
 `;
 

@@ -54,11 +54,11 @@ const Wrapper = styled.section`
   }
   .colors-item {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 0.3rem;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 4px;
     img {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 125px;
+      max-height: 80px;
     }
     img:hover {
       border: 1px solid rgb(17, 17, 17);

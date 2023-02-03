@@ -12,7 +12,7 @@ const ManProducts = ({ endpoint: { items } }) => {
     document.title = 'Men Shoes, Clothing & Accessories. Nike PH';
   }, []);
   return (
-    <div className='mt-4'>
+    <div className='mt-6'>
       <HeadText />
       <div className='flex md:grid md:grid-cols-12'>
         <div className='m-4 mr-5 mt-4 md:mt-4 md:w-52 md:max-h-screen md:min-h-[50vh] md:overflow-scroll md:overflow-x-hidden md:col-span-2 md:sticky sm:hidden md:top-10 md:block'>
@@ -45,7 +45,7 @@ const ManProducts = ({ endpoint: { items } }) => {
           {items?.map((item, i) => {
             const { Id } = item;
             return (
-              <Link to={`/products/${Id}`}>
+              <Link to={`/men/${Id}`}>
                 <Card key={i} {...item} />
               </Link>
             );

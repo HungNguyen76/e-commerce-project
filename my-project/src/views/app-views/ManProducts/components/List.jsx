@@ -2,7 +2,7 @@ import React from 'react';
 
 const List = () => {
   return (
-    <div className='p-7 pt-0 mr-5'>
+    <div className='p-5 pt-0 mr-5'>
       <ul className='flex flex-col gap-3 cursor-pointer'>
         <li>Shoes</li>
         <li>Hoodies & Sweatshirts</li>

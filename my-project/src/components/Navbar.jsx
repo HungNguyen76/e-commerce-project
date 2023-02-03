@@ -15,7 +15,6 @@ import { useUserContext } from '../context/user_context';
 import CartButtons from './CartButtons';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.scss';
-
 const Navbar = () => {
   const { loginWithRedirect, myUser, logout } = useUserContext();
   const [navState, setNavState] = useState(false);
@@ -200,11 +199,17 @@ const Navbar = () => {
               </li>
             </Link>
           </ul>
-          <div className='absolute right-28 lg:block'>
-            <i className='fa-solid fa-magnifying-glass absolute top-1.5 left-2 opacity-50 text-lg'></i>
+          <div className='absolute right-28 lg:block search'>
+            {/* <i className='fa-solid fa-magnifying-glass absolute top-1.5 left-2 opacity-50 text-lg'></i> */}
+            <AiOutlineSearch
+              className={`icon-style absolute ${
+                !navState &&
+                'text-slate-900 transition-all duration-300 l-10 r-10'
+              } `}
+            />
             <input
               placeholder='Search'
-              className='bg-[#f0efef] p-2 rounded-full w-40 pl-8 hover:bg-[#ebe9e9]'
+              className='bg-[#f0efef] p-2 rounded-full w-50 pl-10 hover:bg-[#ebe9e9] mr-10'
               type='text'
             />
           </div>
@@ -236,6 +241,28 @@ const Navbar = () => {
               </div>
             </div>
           </Link>
+          {myUser ? (
+            <li className='grid items-center'>
+              <AiOutlineUserDelete
+                className={`icon-style ${
+                  !navState && 'text-slate-900 transition-all duration-300'
+                } `}
+                onClick={() => {
+                  localStorage.removeItem('user');
+                  logout({ returnTo: window.location.origin });
+                }}
+              />
+            </li>
+          ) : (
+            <li className='grid items-center'>
+              <AiOutlineUserAdd
+                className={`icon-style ${
+                  !navState && 'text-slate-900 transition-all duration-300'
+                } `}
+                onClick={loginWithRedirect}
+              />
+            </li>
+          )}
         </div>
       </nav>
     </>

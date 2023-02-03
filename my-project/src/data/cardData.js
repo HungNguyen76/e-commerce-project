@@ -31,109 +31,6 @@ import wio00908 from '../assets/manProducts/wio-9-road-running/DD6203-009/DD6203
 const cardData = {
   items: [
     {
-      Id: 'wQhT0p',
-      Image:
-        'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec3731d2-8c98-4a5d-ba02-405bfbe24f8f/air-max-terrascape-90-ayakkabısı-Lxf5bw.png',
-      New: true,
-      Title: 'Nike Air Max Terrascape 90',
-      Type: 'Nike',
-      SubTitle: "Men's Shoes",
-      Desc: "Air Max goes crunchy granola. The updated design pairs durable fabrics with colours that throw it back to your Mum's favourite ski jacket from the '90s. You can throw them on or easily hook them to your backpack with webbing pull tabs that double as clipping points. A little crunch goes a long way, though—the classic Air technology makes every trail feel like you're literally walking on Air.",
-      Color: 1,
-      Colors: [
-        {
-          id: 'DQ3987-100',
-          img: [
-            {
-              url: airMaxDawn1,
-            },
-            {
-              url: airMaxDawn1,
-            },
-          ],
-          sizes: [
-            {
-              size: 'US 7.5',
-              quantity: 8,
-            },
-            'US 8',
-            'US 8.5',
-            'US 9',
-            'US 9.5',
-            'US 10',
-            'US 10.5',
-            'US 11',
-            'US 11.5',
-            'US 12',
-            'US 12.5',
-            'US 13',
-          ],
-          price: 10000,
-        },
-        {
-          id: 'DQ3987-002',
-        },
-      ],
-      Reviews: 10,
-      Stars: 4.9,
-    },
-    {
-      Id: '7r9R5R',
-      Image:
-        'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec3cdf8f-ecd3-47d5-8206-655f7272177b/air-max-dawn-ayakkabısı-MmLxf4.png',
-      New: true,
-      Title: 'Nike Air Max Dawn',
-      SubTitle: "Men's Shoes",
-      Color: '4 Renk',
-      Colors: [
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_144_v1/f_auto/cf3807e8-da59-4c49-8857-6c418e06d2c8/air-max-dawn-shoe-gq9GGH.png',
-        },
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_144_v1/f_auto/ec3cdf8f-ecd3-47d5-8206-655f7272177b/air-max-dawn-shoe-gq9GGH.png',
-        },
-      ],
-      Price: '16699',
-      Images: [
-        {
-          url: airMaxDawn1,
-        },
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c94709e8-ca0a-4323-8e9f-a3dfda14a4b0/air-max-dawn-shoe-gq9GGH.png',
-        },
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c7f71bf1-41c8-4ead-ad17-e460f8c58f9c/air-max-dawn-shoe-gq9GGH.png',
-        },
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/36218443-6257-49e0-84ea-8c2b23fa49bf/air-max-dawn-shoe-gq9GGH.png',
-        },
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/290daa08-b270-49f8-8d30-1f72765e720a/air-max-dawn-shoe-gq9GGH.png',
-        },
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/8d050859-aaf0-403a-92c5-7b29fdb1db0c/air-max-dawn-shoes-qgstCg.png',
-        },
-        {
-          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f242ab8d-6cab-464c-aed6-36041e392325/air-max-dawn-shoe-gq9GGH.png',
-        },
-      ],
-      Sizes: [
-        'US 7',
-        'US 7.5',
-        'US 8',
-        'US 8.5',
-        'US 9',
-        'US 9.5',
-        'US 10',
-        'US 10.5',
-        'US 11',
-        'US 11.5',
-        'US 12',
-        'US 12.5',
-        'US 13',
-      ],
-    },
-    {
       Id: 'wio-9-road-running-shoes-185Kr9',
       Image:
         'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9c4e6929-fbbc-495e-b8af-ec76d6e163fd/winflo-8-yol-koşu-ayakkabısı-LHnhnx.png',
@@ -692,6 +589,109 @@ const cardData = {
       SubTitle: "Men's Shoes",
       Color: '1 Renk',
       Price: '1.799,90',
+    },
+    {
+      Id: 'wQhT0p',
+      Image:
+        'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec3731d2-8c98-4a5d-ba02-405bfbe24f8f/air-max-terrascape-90-ayakkabısı-Lxf5bw.png',
+      New: true,
+      Title: 'Nike Air Max Terrascape 90',
+      Type: 'Nike',
+      SubTitle: "Men's Shoes",
+      Desc: "Air Max goes crunchy granola. The updated design pairs durable fabrics with colours that throw it back to your Mum's favourite ski jacket from the '90s. You can throw them on or easily hook them to your backpack with webbing pull tabs that double as clipping points. A little crunch goes a long way, though—the classic Air technology makes every trail feel like you're literally walking on Air.",
+      Color: 1,
+      Colors: [
+        {
+          id: 'DQ3987-100',
+          img: [
+            {
+              url: airMaxDawn1,
+            },
+            {
+              url: airMaxDawn1,
+            },
+          ],
+          sizes: [
+            {
+              size: 'US 7.5',
+              quantity: 8,
+            },
+            'US 8',
+            'US 8.5',
+            'US 9',
+            'US 9.5',
+            'US 10',
+            'US 10.5',
+            'US 11',
+            'US 11.5',
+            'US 12',
+            'US 12.5',
+            'US 13',
+          ],
+          price: 10000,
+        },
+        {
+          id: 'DQ3987-002',
+        },
+      ],
+      Reviews: 10,
+      Stars: 4.9,
+    },
+    {
+      Id: '7r9R5R',
+      Image:
+        'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec3cdf8f-ecd3-47d5-8206-655f7272177b/air-max-dawn-ayakkabısı-MmLxf4.png',
+      New: true,
+      Title: 'Nike Air Max Dawn',
+      SubTitle: "Men's Shoes",
+      Color: '4 Renk',
+      Colors: [
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_144_v1/f_auto/cf3807e8-da59-4c49-8857-6c418e06d2c8/air-max-dawn-shoe-gq9GGH.png',
+        },
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_144_v1/f_auto/ec3cdf8f-ecd3-47d5-8206-655f7272177b/air-max-dawn-shoe-gq9GGH.png',
+        },
+      ],
+      Price: '16699',
+      Images: [
+        {
+          url: airMaxDawn1,
+        },
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c94709e8-ca0a-4323-8e9f-a3dfda14a4b0/air-max-dawn-shoe-gq9GGH.png',
+        },
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/c7f71bf1-41c8-4ead-ad17-e460f8c58f9c/air-max-dawn-shoe-gq9GGH.png',
+        },
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/36218443-6257-49e0-84ea-8c2b23fa49bf/air-max-dawn-shoe-gq9GGH.png',
+        },
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/290daa08-b270-49f8-8d30-1f72765e720a/air-max-dawn-shoe-gq9GGH.png',
+        },
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/8d050859-aaf0-403a-92c5-7b29fdb1db0c/air-max-dawn-shoes-qgstCg.png',
+        },
+        {
+          url: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f242ab8d-6cab-464c-aed6-36041e392325/air-max-dawn-shoe-gq9GGH.png',
+        },
+      ],
+      Sizes: [
+        'US 7',
+        'US 7.5',
+        'US 8',
+        'US 8.5',
+        'US 9',
+        'US 9.5',
+        'US 10',
+        'US 10.5',
+        'US 11',
+        'US 11.5',
+        'US 12',
+        'US 12.5',
+        'US 13',
+      ],
     },
   ],
 };

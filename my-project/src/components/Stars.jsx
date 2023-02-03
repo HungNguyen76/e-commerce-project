@@ -20,8 +20,8 @@ const Stars = ({ stars, reviews }) => {
   return (
     <Wrapper>
       <main className='container'>
+        <p className='reviews'>Reviews({reviews})</p>
         <div className='stars'>{tempStars}</div>
-        <p className='reviews'>({reviews} customer reviews)</p>
       </main>
     </Wrapper>
   );
@@ -31,7 +31,7 @@ const Wrapper = styled.main`
     display: flex;
     align-items: center;
     span {
-      color: #ffb900;
+      color: #111;
       font-size: 1rem;
       margin-right: 0.25rem;
     }
@@ -42,8 +42,14 @@ const Wrapper = styled.main`
     margin-bottom: 0.5rem;
   }
   .container {
-    display: flex
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    .reviews {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+    }
   }
-
 `;
 export default Stars;
