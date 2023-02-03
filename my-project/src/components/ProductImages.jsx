@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const ProductImages = ({ images = [{ url: '' }] }) => {
-  const [main, setMain] = useState(images[0]);
+const ProductImages = ({ images }) => {
+  const tempId = window.location.href.slice(-10);
+  const colorArr = images.Colors.filter((c) => c.idColor === tempId);
+  const { imgColor } = colorArr[0];
+
   return (
     <Wrapper>
       {/* <img src={main.url} alt='main' className='main' /> */}
       <div className='gallery'>
-        {images.map((image, index) => {
+        {imgColor.map((image, index) => {
           return (
             <img
               src={image.url}
               alt={image.filename}
               key={index}
-              onClick={() => setMain(images[index])}
-              className={`${image.url === main.url ? 'active' : null}`}
             />
           );
         })}
@@ -24,36 +26,36 @@ const ProductImages = ({ images = [{ url: '' }] }) => {
 };
 
 const Wrapper = styled.section`
-    .main {
-        height: 700px;
-        width: 1000px;
-    }
+  .main {
+    height: 700px;
+    width: 1000px;
+  }
+  img {
+    width: 470px;
+    display: block;
+    object-fit: cover;
+  }
+  .gallery {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
     img {
-        width: 470px;
-        display: block;
-        object-fit: cover;
+      height: 450px;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .main {
+      height: 500px;
     }
     .gallery {
-        margin-top: 1rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 1rem;
-        column-gap: 1rem;
-        img {
-            height: 450px;
-            cursor: pointer;
-        }
+      img {
+        height: 75px;
+      }
     }
-
-    @media (max-width: 576px) {
-        .main {
-            height: 500px;
-        }
-        .gallery {
-            img {
-                height: 75px;
-            }
-        }
-    }
-`
+  }
+`;
 export default ProductImages;

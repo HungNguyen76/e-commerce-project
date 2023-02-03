@@ -43,19 +43,15 @@ const ManProducts = ({ endpoint: { items } }) => {
 
         <div className='grid md:grid-cols-3 grid-cols-3 gap-4 col-span-10 h-full'>
           {items?.map((item, i) => {
-            const { Id } = item;
+            const { Id, Colors } = item;
+            const { idColor } = Colors[0]
             return (
-              <Link to={`/men/${Id}`}>
+              <Link to={`/men/${Id}/${idColor}`}>
                 <Card key={i} {...item} />
               </Link>
             );
           })}
         </div>
-        {/* <Link to='/products/:id'>
-          <div className='grid md:grid-cols-3 grid-cols-3 gap-4 col-span-10 h-full'>
-            <Card options={cardData} />
-          </div>
-        </Link> */}
       </div>
     </div>
   );

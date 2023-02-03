@@ -8,20 +8,16 @@ import { useParams } from 'react-router-dom'
 // import { GiMachineGun } from 'react-icons/gi';
 
 const ItemDetail = ({ ifExists, endpoint: { items } }) => {
-  const url = window.location;
-  const tempId = url.href.slice(-6);
-  
-  const itemDetail = items.find(item => {
-    const { Id } = item;
-    const sliceId = Id.split('').slice(-6).join('')
-    return item ? sliceId == tempId : null;
-  });
-  const { Title, SubTitle, Desc, Stars, Reviews, Colors } = itemDetail;
-  const { imgColor, priceColor } = itemDetail.Colors[0];
+  const idColorTemp = window.location.href.slice(-42, -11);
+
+  const cardDetail = items.find(item => item.Id == idColorTemp);
+
+  const { Title, SubTitle, Desc, Stars, Reviews, Colors, Price } = cardDetail;
+  // const { imgColor } = Colors[0];
 
   return (
     <Wrapper>
-      <div className={`detail relative h-auto w-auto flex flex-col`}>
+      <div className='detail relative h-auto w-auto flex flex-col'>
         <div className='grid items-center justify-items-center nike-container mt-10'>
           <div className='flex items-start justify-between'>
             {/* <img
@@ -33,7 +29,7 @@ const ItemDetail = ({ ifExists, endpoint: { items } }) => {
                 : 'h-100 w-64'
               }`}
             /> */}
-            <ProductImages images={imgColor} />
+            <ProductImages images={cardDetail} />
             <section className='content'>
               <div className='grid items-center'>
                 <h1 className='text-3xl lg:text-4xl md:text-3xl  font-bold text-slate-900 filter drop-shadow-lg'>
@@ -42,8 +38,8 @@ const ItemDetail = ({ ifExists, endpoint: { items } }) => {
               </div>
               {/* <p>{Title}</p> */}
               <p>{SubTitle}</p>
-              <p className='price'>{formatPrice(priceColor)}</p>
-              <AddToCart product={itemDetail} />
+              <p className='price'>{formatPrice(Price)}</p>
+              <AddToCart product={cardDetail} />
               <p className='mt-10'>{Desc}</p>
               <hr className='mt-4' />
               <Star stars={Stars} reviews={Reviews} />
@@ -62,7 +58,7 @@ const Wrapper = styled.div`
   }
   .content {
     width: 50%;
-    padding: 3.5rem;
+    padding: 4rem;
     padding-top: 1rem !important;
   }
 `;

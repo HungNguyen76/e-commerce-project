@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatPrice } from '@/utils/helpers';
 
 const Card = ({ Image, Title, New, SubTitle, Desc, Color, Price }) => {
   return (
@@ -9,8 +10,8 @@ const Card = ({ Image, Title, New, SubTitle, Desc, Color, Price }) => {
           {New ? <span className='text-orange-500'>Just In</span> : ''}
           <span>{Title}</span>
           <span className='text-gray-400'>{SubTitle}</span>
-          <span className='text-gray-400'>{Color}</span>
-          <span className='mt-2'>{Price}</span>
+          <span className='text-gray-400'>{Color} Color</span>
+          <span className='mt-2'>{formatPrice(Price)}</span>
         </div>
       </div>
     </>

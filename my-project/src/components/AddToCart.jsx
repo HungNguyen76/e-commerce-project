@@ -13,11 +13,19 @@ const AddToCart = ({ product }) => {
       <div className='colors'>
         <div className='colors-item mt-5'>
           {Colors.map((color) => {
+            const { idColor } = color;
+            const refreshPage = () => {
+              window.location.reload();
+            };
             return (
-              <img
-                src={color.imgColor[0].url}
-                alt={color.imgColor[0].filename}
-              />
+              <button onClick={refreshPage}>
+                <Link to={`/men/${Id}/${idColor}`}>
+                  <img
+                    src={color.imgColor[0].url}
+                    alt={color.imgColor[0].filename}
+                  />
+                </Link>
+              </button>
             );
           })}
         </div>
@@ -25,7 +33,9 @@ const AddToCart = ({ product }) => {
         <div className='sizes mt-10'>
           <h3>Select Size</h3>
           <div className='sizes-item'>
-            {Colors[0].sizesColor.map(s => <span>{s.name}</span>)}
+            {Colors[0].sizesColor.map((s) => (
+              <span>{s.name}</span>
+            ))}
           </div>
         </div>
         <button
