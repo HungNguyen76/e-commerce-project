@@ -1,6 +1,5 @@
 import React from 'react';
 import Item from './Item.jsx';
-import ItemDetail from './ItemDetail.jsx';
 import Title from './Title.jsx';
 import { Link } from 'react-router-dom';
 

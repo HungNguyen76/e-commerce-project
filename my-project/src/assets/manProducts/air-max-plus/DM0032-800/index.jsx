@@ -1,0 +1,9 @@
+export { default as airMaxPlus80001 } from '../DM0032-800/DM0032-800-1.webp';
+export { default as airMaxPlus80002 } from '../DM0032-800/DM0032-800-2.webp';
+export { default as airMaxPlus80003 } from '../DM0032-800/DM0032-800-3.webp';
+export { default as airMaxPlus80004 } from '../DM0032-800/DM0032-800-4.webp';
+export { default as airMaxPlus80005 } from '../DM0032-800/DM0032-800-5.webp';
+export { default as airMaxPlus80006 } from '../DM0032-800/DM0032-800-6.webp';
+export { default as airMaxPlus80007 } from '../DM0032-800/DM0032-800-7.webp';
+export { default as airMaxPlus80008 } from '../DM0032-800/DM0032-800-8.jpeg';
+export { default as airMaxPlus80009 } from '../DM0032-800/DM0032-800-9.webp';

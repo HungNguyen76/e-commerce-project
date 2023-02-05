@@ -17,16 +17,16 @@ const AddToCart = ({ product }) => {
             const refreshPage = () => {
               window.location.reload();
             };
-            return (
+            return Colors.length > 1 ? (
               <button onClick={refreshPage}>
-                <Link to={`/men/${Id}/${idColor}`}>
+                <Link to={`/men/${Id}/${idColor}`}>               
                   <img
                     src={color.imgColor[0].url}
                     alt={color.imgColor[0].filename}
                   />
                 </Link>
               </button>
-            );
+            ) : null
           })}
         </div>
 
@@ -41,7 +41,7 @@ const AddToCart = ({ product }) => {
         <button
           type='button'
           className='btn button-theme bg-slate-900 shadow-slate-9 text-slate-100 py-1.5'
-          // onClick={() => addToCart(id, color, amount, product)}
+          onClick={() => addToCart(Id, Colors[0].imgColor, amount, product)}
         >
           {/* <Link to='/cart'>add to bag</Link> */}
           add to bag
@@ -64,7 +64,7 @@ const Wrapper = styled.section`
   }
   .colors-item {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 4px;
     img {
       max-width: 125px;

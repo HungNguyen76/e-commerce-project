@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 
 const ProductImages = ({ images }) => {
   const tempId = window.location.href.slice(-10);
-  const colorArr = images.Colors.filter((c) => c.idColor === tempId);
-  const { imgColor } = colorArr[0];
+  const colorArr = images.Colors.find((c) => c.idColor === tempId);
+  const { imgColor } = colorArr;
 
   return (
     <Wrapper>
-      {/* <img src={main.url} alt='main' className='main' /> */}
       <div className='gallery'>
         {imgColor.map((image, index) => {
           return (

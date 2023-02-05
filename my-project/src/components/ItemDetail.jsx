@@ -1,34 +1,21 @@
 import React from 'react';
-import { Title, Star, ProductImages } from '../components';
+import { Star, ProductImages } from '../components';
 import { formatPrice } from '../utils/helpers';
 import styled from 'styled-components';
 import AddToCart from './AddToCart';
 
-import { useParams } from 'react-router-dom'
-// import { GiMachineGun } from 'react-icons/gi';
+const ItemDetail = ({ endpoint: { items } }) => {
+  const idColorTemp = window.location.href.slice(-17, -11);
 
-const ItemDetail = ({ ifExists, endpoint: { items } }) => {
-  const idColorTemp = window.location.href.slice(-42, -11);
+  const cardDetail = items.find(item => item.Id.slice(-6) === idColorTemp);
 
-  const cardDetail = items.find(item => item.Id == idColorTemp);
-
-  const { Title, SubTitle, Desc, Stars, Reviews, Colors, Price } = cardDetail;
-  // const { imgColor } = Colors[0];
+  const { Title, SubTitle, Desc, Stars, Reviews, Price } = cardDetail;
 
   return (
     <Wrapper>
       <div className='detail relative h-auto w-auto flex flex-col'>
         <div className='grid items-center justify-items-center nike-container mt-10'>
           <div className='flex items-start justify-between'>
-            {/* <img
-              src={img}
-              alt={`img/item-img/${id}`}
-              className={`transitions-theme hover:-rotate-12 ${
-                ifExists
-                ? 'h-100 w-64 lg:w-56 md:w-48 -rotate-[35deg]'
-                : 'h-100 w-64'
-              }`}
-            /> */}
             <ProductImages images={cardDetail} />
             <section className='content'>
               <div className='grid items-center'>
@@ -36,7 +23,6 @@ const ItemDetail = ({ ifExists, endpoint: { items } }) => {
                   {Title}
                 </h1>
               </div>
-              {/* <p>{Title}</p> */}
               <p>{SubTitle}</p>
               <p className='price'>{formatPrice(Price)}</p>
               <AddToCart product={cardDetail} />
