@@ -278,6 +278,8 @@ const cardData = {
               quantity: 10,
             },
           ],
+          priceColor: '9500',
+          colourShown: 'Obsidian/Black/White/Dark Marina Blue',
         },
         {
           idColor: 'DD6203-100',
@@ -315,7 +317,62 @@ const cardData = {
               filename: 'wio10008',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US 7',
+              quantity: 10,
+            },
+            {
+              name: 'US 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 8',
+              quantity: 10,
+            },
+            {
+              name: 'US 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 9',
+              quantity: 10,
+            },
+            {
+              name: 'US 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 10',
+              quantity: 10,
+            },
+            {
+              name: 'US 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 11',
+              quantity: 10,
+            },
+            {
+              name: 'US 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 12',
+              quantity: 10,
+            },
+            {
+              name: 'US 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 13',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'White/Total Orange/Bright Crimson/Black',
         },
         {
           idColor: 'DD6203-009',
@@ -353,7 +410,62 @@ const cardData = {
               filename: 'wio00908',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US 7',
+              quantity: 10,
+            },
+            {
+              name: 'US 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 8',
+              quantity: 10,
+            },
+            {
+              name: 'US 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 9',
+              quantity: 10,
+            },
+            {
+              name: 'US 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 10',
+              quantity: 10,
+            },
+            {
+              name: 'US 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 11',
+              quantity: 10,
+            },
+            {
+              name: 'US 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 12',
+              quantity: 10,
+            },
+            {
+              name: 'US 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 13',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'Photon Dust/White/Platinum Tint/Black',
         },
         {
           idColor: 'DD6203-001',
@@ -391,7 +503,62 @@ const cardData = {
               filename: 'wio00108',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US 7',
+              quantity: 10,
+            },
+            {
+              name: 'US 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 8',
+              quantity: 10,
+            },
+            {
+              name: 'US 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 9',
+              quantity: 10,
+            },
+            {
+              name: 'US 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 10',
+              quantity: 10,
+            },
+            {
+              name: 'US 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 11',
+              quantity: 10,
+            },
+            {
+              name: 'US 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 12',
+              quantity: 10,
+            },
+            {
+              name: 'US 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 13',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'Black/Dark Smoke Grey/White',
         },
         {
           idColor: 'DD6203-002',
@@ -429,7 +596,70 @@ const cardData = {
               filename: 'wio00208',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US M 6/W 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US M 6.5/W 8',
+              quantity: 10,
+            },
+            {
+              name: 'US M 7/W 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US M 7.5/W 9',
+              quantity: 10,
+            },
+            {
+              name: 'US M 8/W 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US M 8.5/W 10',
+              quantity: 10,
+            },
+            {
+              name: 'US M 9/W 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US M 9.5/W 11',
+              quantity: 10,
+            },
+            {
+              name: 'US M 10/W 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US M 10.5/W 12',
+              quantity: 10,
+            },
+            {
+              name: 'US M 11/ W 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US M 11.5/W 13',
+              quantity: 10,
+            },
+            {
+              name: 'US M 12/W 13.5',
+              quantity: 10,
+            },
+            {
+              name: 'US M 12.5/W 14',
+              quantity: 10,
+            },
+            {
+              name: 'US M 13/W 14.5',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'Black/Dark Smoke Grey',
         },
         {
           idColor: 'DD6203-006',
@@ -467,7 +697,62 @@ const cardData = {
               filename: 'wio00608',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US 7',
+              quantity: 10,
+            },
+            {
+              name: 'US 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 8',
+              quantity: 10,
+            },
+            {
+              name: 'US 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 9',
+              quantity: 10,
+            },
+            {
+              name: 'US 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 10',
+              quantity: 10,
+            },
+            {
+              name: 'US 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 11',
+              quantity: 10,
+            },
+            {
+              name: 'US 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 12',
+              quantity: 10,
+            },
+            {
+              name: 'US 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 13',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'Football Grey/Concord/Cinnabar/Bright Crimson',
         },
         {
           idColor: 'DD6203-007',
@@ -505,7 +790,62 @@ const cardData = {
               filename: 'wio00708',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US 7',
+              quantity: 10,
+            },
+            {
+              name: 'US 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 8',
+              quantity: 10,
+            },
+            {
+              name: 'US 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 9',
+              quantity: 10,
+            },
+            {
+              name: 'US 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 10',
+              quantity: 10,
+            },
+            {
+              name: 'US 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 11',
+              quantity: 10,
+            },
+            {
+              name: 'US 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 12',
+              quantity: 10,
+            },
+            {
+              name: 'US 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 13',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'Black/Blackened Blue/Cave Purple/Gold Suede',
         },
         {
           idColor: 'DD6203-008',
@@ -543,7 +883,62 @@ const cardData = {
               filename: 'wio00808',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US 7',
+              quantity: 10,
+            },
+            {
+              name: 'US 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 8',
+              quantity: 10,
+            },
+            {
+              name: 'US 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 9',
+              quantity: 10,
+            },
+            {
+              name: 'US 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 10',
+              quantity: 10,
+            },
+            {
+              name: 'US 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 11',
+              quantity: 10,
+            },
+            {
+              name: 'US 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 12',
+              quantity: 10,
+            },
+            {
+              name: 'US 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 13',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'Black/Ashen Slate/White',
         },
         {
           idColor: 'DD6203-401',
@@ -581,12 +976,68 @@ const cardData = {
               filename: 'wio40108',
             },
           ],
+          sizesColor: [
+            {
+              name: 'US 7',
+              quantity: 10,
+            },
+            {
+              name: 'US 7.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 8',
+              quantity: 10,
+            },
+            {
+              name: 'US 8.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 9',
+              quantity: 10,
+            },
+            {
+              name: 'US 9.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 10',
+              quantity: 10,
+            },
+            {
+              name: 'US 10.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 11',
+              quantity: 10,
+            },
+            {
+              name: 'US 11.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 12',
+              quantity: 10,
+            },
+            {
+              name: 'US 12.5',
+              quantity: 10,
+            },
+            {
+              name: 'US 13',
+              quantity: 10,
+            },
+          ],
           priceColor: '9500',
+          colourShown: 'Obsidian/Valerian Blue/Bright Spruce/Barely Green',
         },
       ],
       Reviews: 100,
       Stars: 5,
       Price: '95',
+      Stock: 10,
     },
     {
       Id: 'air-max-dawn-shoes-7r9R5R',
@@ -884,6 +1335,7 @@ const cardData = {
       Reviews: 80,
       Stars: 4.5,
       Price: '105',
+      Stock: 10,
     },
     {
       Id: 'air-jordan-11-retro-low-ie-shoes-30kr7w',
@@ -989,6 +1441,7 @@ const cardData = {
       Reviews: 125,
       Stars: 5,
       Price: '200',
+      Stock: 10,
     },
     {
       Id: 'air-huarache-shoes-fg69qQ',
@@ -1397,6 +1850,7 @@ const cardData = {
       Reviews: 85,
       Stars: 4.5,
       Price: '130',
+      Stock: 10,
     },
     {
       Id: 'air-max-plus-shoes-04K813',
@@ -1506,6 +1960,7 @@ const cardData = {
       Reviews: 85,
       Stars: 4.5,
       Price: '130',
+      Stock: 10,
     },
     {
       Id: 'wio-9-road-running-shoes-185Kr9',
@@ -1915,6 +2370,7 @@ const cardData = {
       Reviews: 100,
       Stars: 5,
       Price: '95',
+      Stock: 10,
     },
     {
       Id: 'air-max-dawn-shoes-7r9R5R',
@@ -2212,6 +2668,7 @@ const cardData = {
       Reviews: 80,
       Stars: 4.5,
       Price: '105',
+      Stock: 10,
     },
     {
       Id: 'air-jordan-11-retro-low-ie-shoes-30kr7w',
@@ -2317,6 +2774,7 @@ const cardData = {
       Reviews: 125,
       Stars: 5,
       Price: '200',
+      Stock: 10,
     },
     {
       Id: 'air-huarache-shoes-fg69qQ',
@@ -2612,6 +3070,7 @@ const cardData = {
       Reviews: 125,
       Stars: 5,
       Price: '150',
+      Stock: 10,
     },
     {
       Id: 'air-max-terrascape-90-shoes-wQhT0p',
@@ -2725,6 +3184,7 @@ const cardData = {
       Reviews: 85,
       Stars: 4.5,
       Price: '130',
+      Stock: 10,
     },
     {
       Id: 'air-max-plus-shoes-04K813',
@@ -2834,6 +3294,7 @@ const cardData = {
       Reviews: 85,
       Stars: 4.5,
       Price: '130',
+      Stock: 10,
     },
     {
       Id: 'wio-9-road-running-shoes-185Kr9',
@@ -3243,6 +3704,7 @@ const cardData = {
       Reviews: 100,
       Stars: 5,
       Price: '95',
+      Stock: 10,
     },
     {
       Id: 'air-max-dawn-shoes-7r9R5R',
@@ -3540,6 +4002,7 @@ const cardData = {
       Reviews: 80,
       Stars: 4.5,
       Price: '105',
+      Stock: 10,
     },
     {
       Id: 'air-jordan-11-retro-low-ie-shoes-30kr7w',
@@ -3645,6 +4108,7 @@ const cardData = {
       Reviews: 125,
       Stars: 5,
       Price: '200',
+      Stock: 10,
     },
     {
       Id: 'air-huarache-shoes-fg69qQ',
@@ -3940,6 +4404,7 @@ const cardData = {
       Reviews: 125,
       Stars: 5,
       Price: '150',
+      Stock: 10,
     },
     {
       Id: 'air-max-terrascape-90-shoes-wQhT0p',
@@ -4053,6 +4518,7 @@ const cardData = {
       Reviews: 85,
       Stars: 4.5,
       Price: '130',
+      Stock: 10,
     },
     {
       Id: 'air-max-plus-shoes-04K813',

@@ -5,14 +5,15 @@ import {
   REMOVE_CART_ITEM,
   TOOGLE_CART_ITEM_AMOUNT,
 } from '../actions';
+import { products_url } from '../utils/constants';
 
 const cart_reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {
-    const { id, color, amount, product } = action.payload;
-    const tempItem = state.cart.find((i) => i.id === id);
+    const { Id, idColor, ColorsArr, amount, product } = action.payload;
+    const tempItem = state.cart.find((i) => i.id === Id);
     if (tempItem) {
       const tempCart = state.cart.map((cartItem) => {
-        if (cartItem.id === id) {
+        if (cartItem.id === Id) {
           let newAmount = cartItem.amount + amount;
           return { ...cartItem, amount: newAmount };
         } else {
@@ -22,13 +23,15 @@ const cart_reducer = (state, action) => {
       return { ...state, cart: tempCart };
     } else {
       const newItem = {
-        id,
-        name: product.name,
-        color,
+        Id,
+        idColor,
+        name: product.Title,
+        subtitle: product.SubTitle,
+        ColorsArr,
         amount,
-        image: product.image,
-        price: product.price,
-        max: product.stock,
+        image: product.Image,
+        price: product.Price,
+        max: product.Stock,
       };
       return { ...state, cart: [...state.cart, newItem] };
     }
@@ -37,7 +40,7 @@ const cart_reducer = (state, action) => {
     return { ...state, cart: [] };
   }
   if (action.type === REMOVE_CART_ITEM) {
-    const tempCart = state.cart.filter((item) => item.id !== action.payload);
+    const tempCart = state.cart.filter((item) => item.idColor !== action.payload);
     return { ...state, cart: tempCart };
   }
   if (action.type === TOOGLE_CART_ITEM_AMOUNT) {

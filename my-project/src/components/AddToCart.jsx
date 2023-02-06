@@ -8,6 +8,10 @@ const AddToCart = ({ product }) => {
   const { addToCart } = useCartContext();
   const { Id, Title, stock, Colors, Sizes } = product;
   const [amount, setAmount] = useState(1);
+  const idColor = window.location.href.slice(-10);
+
+  const sizesProduct = Colors.find(color => color.idColor === idColor)
+  const ColorsArr = Colors.find(color => color.idColor === idColor)
   return (
     <Wrapper>
       <div className='colors'>
@@ -19,21 +23,21 @@ const AddToCart = ({ product }) => {
             };
             return Colors.length > 1 ? (
               <button onClick={refreshPage}>
-                <Link to={`/men/${Id}/${idColor}`}>               
+                <Link to={`/men/${Id}/${idColor}`}>
                   <img
                     src={color.imgColor[0].url}
                     alt={color.imgColor[0].filename}
                   />
                 </Link>
               </button>
-            ) : null
+            ) : null;
           })}
         </div>
 
         <div className='sizes mt-10'>
           <h3>Select Size</h3>
           <div className='sizes-item'>
-            {Colors[0].sizesColor.map((s) => (
+            {sizesProduct.sizesColor.map((s) => (
               <span>{s.name}</span>
             ))}
           </div>
@@ -41,7 +45,7 @@ const AddToCart = ({ product }) => {
         <button
           type='button'
           className='btn button-theme bg-slate-900 shadow-slate-9 text-slate-100 py-1.5'
-          onClick={() => addToCart(Id, Colors[0].imgColor, amount, product)}
+          onClick={() => addToCart(Id, idColor, ColorsArr, amount, product)}
         >
           {/* <Link to='/cart'>add to bag</Link> */}
           add to bag
