@@ -5,7 +5,7 @@ import { mainPhoto } from '@/assets';
 
 const MainPhoto = () => {
   return (
-    <div className='main mt-20'>
+    <div className='main mt-40'>
       <img
         className='lg:block xl:block md:block'
         src={mainPhoto}

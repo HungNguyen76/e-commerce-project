@@ -1,4 +1,4 @@
-import heroimg from '../assets/hero.png';
+import sneakers from '../assets/sneaker.png';
 
 import hightlightimg from '../assets/hightlightimg.png';
 import sneakershoe from '../assets/sneaker.png';
@@ -53,7 +53,7 @@ import { FaMaxcdn } from 'react-icons/fa';
 const heroapi = {
   title: 'Play With Electric Nike',
   subtitle: 'Adapt 2.0 Sneakers',
-  img: heroimg,
+  img: sneakers,
   btntext: 'Explore Product',
   videos: [
     { imgsrc: vcover1, clip: clip },

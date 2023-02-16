@@ -2,13 +2,13 @@ import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Navbar, ItemDetail } from '@/components';
 import { cardData } from '@/data/cardData';
-// import {Cart} from '@/pages'
 import { toprateslaes } from '@/data/data'
 
 const Home = React.lazy(() => import('./Home'));
 const ManProducts = React.lazy(() => import('./ManProducts'));
 const ProductsPage = React.lazy(() => import('../../pages/ProductsPage'));
 const Cart = React.lazy(() => import('./Cart'));
+const LoginForm = React.lazy(() => import('./LoginForm'));
 
 const AppViews = () => {
   return (
@@ -24,6 +24,10 @@ const AppViews = () => {
         <Route
           path='/products'
           element={<ProductsPage endpoint={toprateslaes} ifExists />}
+        />
+        <Route
+          path='/login'
+          element={<LoginForm />}
         />
         <Route path='*' element={<Home />} />
       </Routes>

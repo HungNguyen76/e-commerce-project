@@ -9,7 +9,7 @@ import { TfiTrash } from 'react-icons/tfi';
 
 const Cart = () => {
   const { cart, removeItem, total_amount, shipping_fee } = useCartContext();
- 
+
   useEffect(() => {
     document.title = 'Bag. Nike Store.';
   }, []);
@@ -21,7 +21,7 @@ const Cart = () => {
           <Wrapper className='page-100'>
             <div className='empty'>
               <h2>There are no items in your bag</h2>
-              <Link to='/' className='btn'>
+              <Link to='/men' className='btn'>
                 Buy a product
               </Link>
             </div>
@@ -70,12 +70,23 @@ const Cart = () => {
       </div>
       <div className='flex flex-col gap-2'>
         <span className='text-2xl'>Summary</span>
-        <span>Subtotal: {formatPrice(total_amount)}</span>
-        <span>Estimated Delivery & Handling: {formatPrice(shipping_fee)}</span>
+        <div className='flex justify-between'>
+          <span>Subtotal </span>
+          <span className='ml-5'>{formatPrice(total_amount)}</span>
+        </div>
+        <div className='flex justify-between'>
+          <span>Estimated Delivery & Handling </span>
+          <span className='ml-5'>
+            {shipping_fee === 0 ? 'Free' : formatPrice(shipping_fee)}
+          </span>
+        </div>
         <hr />
-        <span className='font-semibold'>
-          Total: <span>{formatPrice(total_amount + shipping_fee)}</span>
-        </span>
+        <div className='flex justify-between'>
+          <span className='font-semibold'>Total</span>
+          <span className='font-bold'>
+            {formatPrice(total_amount + shipping_fee)}
+          </span>
+        </div>
         <hr />
         <div className='flex flex-col buttons-cart'>
           <button disabled>Member Checkout </button>

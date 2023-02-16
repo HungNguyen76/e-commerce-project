@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import LoginModal from 'views/app-views/LoginModal';
+import LoginForm from '@/views/app-views/LoginForm';
 import './TopHeader.scss';
 const TopHeader = () => {
   return (
@@ -15,18 +15,21 @@ const TopHeader = () => {
       <div className=''>
         <nav>
           <ul>
-            <Link to='/help'>
+            <Link to='/'>
+              <li>Find a store</li>
+            </Link>
+            <li className='separator-top-menu'>|</li>
+            <Link to='/'>
               <li>Help</li>
             </Link>
             <li className='separator-top-menu'>|</li>
-            <Link to='/register'>
-              <li>Register</li>
+            <Link to='/'>
+              <li>Join us</li>
             </Link>
             <li className='separator-top-menu'>|</li>
-            <Link to='/store'>
-              <li>Find a store</li>
+            <Link to='/login'>
+              <li>Sign In</li>
             </Link>
-            {/* <LoginModal /> */}
           </ul>
         </nav>
       </div>
