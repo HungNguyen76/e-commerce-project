@@ -8,7 +8,7 @@ const Home = React.lazy(() => import('./Home'));
 const ManProducts = React.lazy(() => import('./ManProducts'));
 const ProductsPage = React.lazy(() => import('../../pages/ProductsPage'));
 const Cart = React.lazy(() => import('./Cart'));
-const LoginForm = React.lazy(() => import('./LoginForm'));
+const Register = React.lazy(() => import('./Register'));
 
 const AppViews = () => {
   return (
@@ -25,10 +25,7 @@ const AppViews = () => {
           path='/products'
           element={<ProductsPage endpoint={toprateslaes} ifExists />}
         />
-        <Route
-          path='/login'
-          element={<LoginForm />}
-        />
+        <Route path='/login' element={<Register />} />
         <Route path='*' element={<Home />} />
       </Routes>
     </Suspense>
