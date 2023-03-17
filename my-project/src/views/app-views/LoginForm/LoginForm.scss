@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 *:focus {
   outline: none;
 }
@@ -19,7 +19,7 @@
   right: 40px;
   bottom: 40px;
   background-color: white;
-  transform: "translate(-50%, -50%)";
+  transform: 'translate(-50%, -50%)';
   transition: all 0.4s;
   z-index: 20;
 }
@@ -40,7 +40,7 @@
   @apply font-extrabold text-xl text-center;
   span {
     @apply text-2xl;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
   }
 }
 .login-panel-form {
@@ -48,12 +48,18 @@
   input {
     @apply pl-4 text-sm border text-gray-400 w-96 py-4 mt-4 rounded-md;
   }
+  label {
+    color: rgb(156 163 175);
+    font-size: 0.875rem;
+    margin-top:1rem;
+  }
   .login-panel-desc {
     @apply text-xs mt-4 text-center text-gray-500;
   }
   .login-panel-button {
     @apply mt-4  px-4 py-2 bg-black text-white rounded-md font-extrabold text-base;
-    font-family: "Oswald", sans-serif;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
   }
 }
 .register-panel-form {
@@ -66,7 +72,7 @@
   }
   .register-panel-button {
     @apply mt-4  px-4 py-2 bg-black text-white rounded-md font-extrabold text-base;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
   }
   #country {
     @apply mt-4 pl-4 text-sm py-4 text-gray-500 border rounded-md;

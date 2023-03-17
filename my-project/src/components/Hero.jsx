@@ -34,7 +34,7 @@ const Hero = ({
               ))}
             </div>
           </div>
-          <div className='flex items-center'>
+          <div className='flex items-center mt-10'>
             <img
               src={img}
               alt='hero-img/img'

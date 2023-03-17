@@ -16,3 +16,5 @@ export { default as CartColumns } from './CartColumns.jsx';
 export { default as AmountButtons } from './AmountButtons.jsx';
 export { default as ProductList } from './ProductList.jsx';
 export { default as GridView } from './GridView.jsx';
+export { default as FormRow } from './FormRow.jsx';
+export { default as FormRowSelect } from './FormRowSelect.jsx';

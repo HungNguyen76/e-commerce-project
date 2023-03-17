@@ -3,12 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 import { Navbar, ItemDetail } from '@/components';
 import { cardData } from '@/data/cardData';
 import { toprateslaes } from '@/data/data'
+// import { AddProduct } from '@/views/app-views/Dashboard/AddProduct';
 
 const Home = React.lazy(() => import('./Home'));
 const ManProducts = React.lazy(() => import('./ManProducts'));
 const ProductsPage = React.lazy(() => import('../../pages/ProductsPage'));
 const Cart = React.lazy(() => import('./Cart'));
 const Register = React.lazy(() => import('./Register'));
+const AddProduct = React.lazy(() => import('@/views/app-views/Dashboard/AddProduct'));
 
 const AppViews = () => {
   return (
@@ -26,6 +28,7 @@ const AppViews = () => {
           element={<ProductsPage endpoint={toprateslaes} ifExists />}
         />
         <Route path='/login' element={<Register />} />
+        <Route path='/admin/add-product' element={<AddProduct />} />
         <Route path='*' element={<Home />} />
       </Routes>
     </Suspense>

@@ -241,7 +241,7 @@ const Navbar = () => {
               </div>
             </div>
           </Link>
-          {myUser ? (
+          {/* {myUser ? (
             <li className='grid items-center'>
               <AiOutlineUserDelete
                 className={`icon-style ${
@@ -262,7 +262,7 @@ const Navbar = () => {
                 onClick={loginWithRedirect}
               />
             </li>
-          )}
+          )} */}
         </div>
       </nav>
     </>

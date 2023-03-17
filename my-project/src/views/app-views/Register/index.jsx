@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LoginForm from '../LoginForm';
-import RegisterForm from './components/RegisterForm';
+import SignUp from './components/RegisterForm';
+// import RegisterForm from './components/RegisterForm';
 
 const Register = () => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const Register = () => {
       {login ? (
         <LoginForm setLogin={setLogin} />
       ) : (
-        <RegisterForm setLogin={setLogin} />
+        <SignUp setLogin={setLogin} />
       )}
     </>
   );

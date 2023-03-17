@@ -27,12 +27,13 @@ const ManProducts = ({ endpoint: { items } }) => {
           <hr className='mt-4' />
           <Gender />
         </div>
-        <div className='grid grid-cols-3 gap-4 col-span-10 h-full'>
+        <div className='grid grid-cols-4 gap-4 col-span-10 h-full'>
           {newProducts?.map((item, i) => {
             const { _id: idProduct, productColors } = item;
-            const { _id: idColor } = productColors[0];
+            // const { _id: idColor } = productColors[0];
             return (
-              <Link to={`/men/${idProduct}/${idColor}`}>
+              // <Link to={`/men/${idProduct}/${idColor}`}>
+              <Link to={`/men`}>
                 <Card key={i} {...item} />
               </Link>
             );

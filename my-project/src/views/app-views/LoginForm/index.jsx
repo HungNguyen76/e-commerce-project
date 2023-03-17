@@ -1,15 +1,59 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './LoginForm.scss';
-import Modal from 'react-modal';
-// import SelectCountries from './LoginModal-Components/SelectCountries';
+import { toast } from 'react-toastify';
+import { loginUser, registerUser } from '@/features/user/userSlice';
+import { useNavigate } from 'react-router-dom';
 
+const initialState = {
+  username: '',
+  email: '',
+  password: '',
+  isMember: true,
+};
 const LoginForm = ({ setLogin }) => {
+  const [values, setValues] = useState(initialState);
+  const { user, isLoading } = useSelector((store) => store.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const toggleMember = () => {
+    setValues({ ...values, isMember: !values.isMember });
+  };
+  const handleChange = (e) => {
+    const username = e.target.name;
+    const value = e.target.value;
+
+    setValues({ ...values, [username]: value });
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const { email, password, isMember } = values;
+    if (!password || (!isMember && !email)) {
+      toast.error('Please fill out all fields');
+      return;
+    }
+    // if (isMember) {
+    //   dispatch(loginUser({ username, email, password }));
+    //   return;
+    // }
+    dispatch(
+      loginUser({ email: email, password: password })
+    );
+  };
   useEffect(() => {
-    document.title = "Log in";
+    document.title = 'Log in';
   }, []);
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    }
+  }, [user]);
 
   return (
-    <div className='flex flex-col justify-center items-center mt-20'>
+    <div className='flex flex-col justify-center items-center mt-5'>
       <div className='nike-unite-swoosh'>
         <img
           src='https://s3.nikecdn.com/unite/app/912/images/swoosh_black.png'
@@ -21,10 +65,24 @@ const LoginForm = ({ setLogin }) => {
           YOUR ACCOUNT FOR <br /> EVERYTHING NIKE
         </span>
       </div>
-      <form>
+      <form className='form' onSubmit={onSubmit}>
         <div className='login-panel-form'>
-          <input required placeholder='Email address' type='text' />
-          <input required placeholder='Password' type='password' />
+          <input
+            required
+            name='email'
+            type='email'
+            value={values.email}
+            onChange={handleChange}
+            placeholder='Email Address'
+          />
+          <input
+            required
+            name='password'
+            type='password'
+            value={values.password}
+            onChange={handleChange}
+            placeholder='Password'
+          />
           <span className='login-panel-desc'>
             By logging in, you agree to Nike's
             <a
@@ -42,7 +100,9 @@ const LoginForm = ({ setLogin }) => {
               Terms of Use.
             </a>
           </span>
-          <button className='login-panel-button'>Sign In</button>
+          <button className='login-panel-button' onClick={toggleMember}>
+            SIGN IN
+          </button>
           <span className='text-center mt-4 text-xs'>
             Not a Member?{' '}
             <span

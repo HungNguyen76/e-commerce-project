@@ -1,8 +1,8 @@
 import React from 'react';
 import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi';
-import psale1 from '../assets/nike-air-red.png';
-import psale2 from '../assets/nike-adapt-bb.png';
-import psale3 from '../assets/nike-adapt-bb-smart.png';
+import psale1 from '@/assets/nike-air-red.png';
+import psale2 from '@/assets/nike-adapt-bb.png';
+import psale3 from '@/assets/nike-adapt-bb-smart.png';
 
 export const links = [
   {

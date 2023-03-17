@@ -8,8 +8,8 @@ const Card = ({ title, subtitle, description, color, image }) => {
     <>
       <div className='cursor-pointer'>
         <img
-          className='mb-10'
-          src={image}
+          className='mb-10 w-70'
+          src={import.meta.env.VITE_IMAGE_HOST + image}
           alt={title}
         />
         <div className='flex flex-col'>
